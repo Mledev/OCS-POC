@@ -2,7 +2,7 @@ let express = require('express');
 let app = require('express')();
 let server = require('http').Server(app);
 let io = require('socket.io')(server);
-let ip = "127.0.0.1";
+let ip = "10.42.163.147";
 let port = 8989;
 
 app.use('/assets', express.static(__dirname + '/dist'));
@@ -78,10 +78,12 @@ io.on('connection', (socket) => {
 
     if(users[user.uid] !== undefined){
         createSocket(user);
+        console.log('new user')
         socket.emit('updateUsersList', getUsers());
     }
     else{
         createUser(user);
+        console.log('new user')
         io.emit('updateUsersList', getUsers());
     }
 

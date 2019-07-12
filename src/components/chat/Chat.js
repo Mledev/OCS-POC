@@ -70,7 +70,7 @@ class Chat extends React.Component {
         this.setState({
             chat_ready : true,
         });
-        this.socket = socketIOClient('ws://localhost:8989', {
+        this.socket = socketIOClient('ws://10.42.163.147:8989', {
             query : 'username='+this.state.username+'&uid='+this.state.uid
         });
 

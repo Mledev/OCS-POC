@@ -15,7 +15,7 @@ class Video extends React.Component {
     }
 
     componentDidMount(){
-        this.socket = socketIOClient('ws://localhost:8989', {
+        this.socket = socketIOClient('ws://10.42.163.147:8989', {
             query : 'username='+localStorage.getItem('username')+'&uid='+localStorage.getItem('uid')
         });
 

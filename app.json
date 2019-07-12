@@ -1,0 +1,20 @@
+{
+  "name": "Socket-Chat-Example",
+  "description": "my first socket.io app",
+  "website": "https://github.com/Mledev/OCS-POC",
+  "repository": "https://github.com/Mledev/OCS-POC",
+  "success_url": "/",
+  "keywords": [
+    "node",
+    "express",
+    "socket.io",
+    "realtime",
+    "websocket"
+  ],
+  "scripts": {
+  },
+  "addons": [
+  ],
+  "env": {
+  }
+}

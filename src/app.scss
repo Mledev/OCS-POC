@@ -1,0 +1,119 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css?family=Abel|Montserrat');
+
+html,body {
+  font-family: 'Helvetica', sans-serif;
+  height: 100%;
+  width: 100%;
+  margin : 0px;
+  padding : 0px;
+  color: white;
+  background: #1d1d1d;
+}
+
+#root{
+  position:relative;
+  height: 100%;
+  width: 100%;
+  padding-top: 56px;
+
+  .enter-chat{
+    display: block;
+    position:relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  nav{
+    a{
+      color: #FFA500;
+    }
+
+    button{
+      background: transparent; 
+      color: #FFA500;
+      border: #FFA500 1px solid;
+    }
+  }
+
+  .main-content{
+    display: grid;
+    grid-template-columns: auto 300px;
+  }
+
+  .video{
+    video{
+      width: 100%;
+    }
+  }
+
+  .enter-chat{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,.9);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .chat{
+    display: block;
+    height: 100%;
+    width: 100%;
+
+    .users, .messages{
+      padding: 0px;
+    }
+
+    .users {
+      background: #1a1a1a;
+
+      .user{
+        padding: 10px;
+
+        .fa-user{
+          color :#FFA500;
+        }
+      }
+    }
+
+    input{
+      background: #1a1a1a;
+      color: white;
+      border: none;
+    }
+
+    .messages{
+      background: #141414;
+      overflow:auto;
+
+      .message{
+        padding: 10px;
+        display: block;
+        min-height: 50px;
+        height : auto !important;
+        clear:both;
+
+        .username, .data{
+          display: inline-block;
+          float:left;
+          margin-right: 10px;
+        }
+      }
+
+      .no-message{
+        margin: 10px;
+      }
+    }
+
+    .chatbox{
+      position:fixed;
+      bottom: 0px;
+      padding: 0px;
+    }
+  }
+}
+
